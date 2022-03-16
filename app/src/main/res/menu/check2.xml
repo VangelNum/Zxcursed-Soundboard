@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/action1"
+        android:orderInCategory="2"
+        android:title="Поделиться 😎"/>
+    <item
+        android:id="@+id/action2"
+        android:orderInCategory="3"
+        android:title="Контакты 🌝"/>
+    <item
+        android:id="@+id/action3"
+        android:orderInCategory="1"
+        android:title="Поставить 5 звезд ⭐"/>
+    <item
+        android:id="@+id/action4"
+        android:orderInCategory="4"
+        android:title="Не нажимай 🤔"/>
+</menu>
