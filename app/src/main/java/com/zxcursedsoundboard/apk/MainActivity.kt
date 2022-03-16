@@ -1815,10 +1815,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    fun check31231()
-    {
 
-    }
     override fun onPause() {
         super.onPause()
         stop1()
