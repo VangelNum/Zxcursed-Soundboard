@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="preloaded_fonts" translatable="false">
+        <item>@font/</item>
+        <item>@font/abeezee</item>
+        <item>@font/alegreya_italic</item>
+        <item>@font/annie_use_your_telescope</item>
+        <item>@font/codystar</item>
+        <item>@font/dosis_extralight</item>
+        <item>@font/gilda_display</item>
+        <item>@font/maiden_orange</item>
+        <item>@font/merriweather</item>
+        <item>@font/merriweather_italic</item>
+        <item>@font/merriweather_light</item>
+        <item>@font/monsieur_la_doulaise</item>
+        <item>@font/montserrat_subrayada</item>
+        <item>@font/noto_sans</item>
+        <item>@font/ntr</item>
+        <item>@font/oswald_light</item>
+        <item>@font/playfair_display</item>
+        <item>@font/pt_serif</item>
+        <item>@font/shadows_into_light_two</item>
+        <item>@font/sumana</item>
+        <item>@font/ubuntu_light</item>
+        <item>@font/yellowtail</item>
+        <item>@font/yeseva_one</item>
+        <item>@font/zeyada</item>
+    </array>
+</resources>
