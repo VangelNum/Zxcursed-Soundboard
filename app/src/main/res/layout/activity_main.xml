@@ -8,6 +8,37 @@
     android:persistentDrawingCache="none"
     tools:context=".MainActivity">
 
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        app:layout_constraintGuide_percent="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline2"
+        app:layout_constraintGuide_percent="0.4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        app:layout_constraintGuide_percent="0.6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        app:layout_constraintGuide_percent="0.8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.1" />
 
     <ScrollView
         android:id="@+id/root_layout"
@@ -17,14 +48,12 @@
         android:backgroundTint="#000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnNextActivity"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginLeft="15dp"
             android:layout_marginTop="10dp"
             android:layout_marginRight="15dp"
@@ -35,11 +64,26 @@
             android:persistentDrawingCache="none"
             android:stateListAnimator="@android:anim/bounce_interpolator">
 
+            <ImageView
+                android:id="@+id/imageViewcontact"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/ic_baseline_person_24"
+                tools:visibility="visible"
+                tools:ignore="ContentDescription" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_light"
+                android:layout_gravity="center"
+                android:fontFamily="@font/atypdisplaynew"
+                android:gravity="center"
                 android:linksClickable="true"
                 android:text="@string/check"
                 android:textColor="#33312F"
@@ -51,29 +95,38 @@
                 android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/annie_use_your_telescope"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poiret_one"
+                android:gravity="center"
                 android:text="@string/check2"
                 android:textColor="#4F5A9E"
-                android:textSize="35sp"
+                android:textSize="23sp"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/annie_use_your_telescope"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poiret_one"
                 android:text="@string/check3"
                 android:textColor="#4F5A9E"
-                android:textSize="35sp"
+                android:textSize="23sp"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:fontFamily="@font/ubuntu_light"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/atypdisplaynew"
+                android:gravity="center"
                 android:text="@string/check5"
                 android:textColor="#33312F"
                 android:textSize="23sp"
@@ -84,10 +137,13 @@
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/annie_use_your_telescope"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:fontFamily="@font/poiret_one"
+                android:gravity="center"
                 android:text="@string/check6"
                 android:textColor="#4F5A9E"
-                android:textSize="35sp"
+                android:textSize="23sp"
                 android:visibility="gone"
                 tools:visibility="visible" />
 
@@ -97,14 +153,13 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Пивка бахнул"
+                android:text="@string/pivo"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="@id/imageView3"
                 tools:visibility="visible" />
@@ -115,18 +170,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Всем молчать"
+                android:text="@string/molchat"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
-                tools:visibility="gone" />
+                tools:visibility="visible" />
 
             <Button
                 android:id="@+id/button4"
@@ -134,17 +187,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Ну я трахаю"
+                android:text="@string/traxat"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button2"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -153,17 +204,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="пикапер"
+                android:text="@string/pikaper"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button3"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -172,17 +221,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="сюда лут"
+                android:text="@string/sydalut"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button4"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -191,17 +238,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="мадмуазель"
+                android:text="@string/madmyazel"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button5"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -210,17 +255,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="что это блять"
+                android:text="@string/chtoetoblyat"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button6"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -229,17 +272,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="спасибо"
+                android:text="@string/spasibo"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button7"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -248,17 +289,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="денег нет"
+                android:text="@string/denegnet"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button8"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -267,17 +306,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="минус пиво"
+                android:text="@string/minuspivo"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button15"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -286,18 +323,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="учи меня быстро"
+                android:text="@string/uchimenyabistro"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
             <Button
@@ -306,18 +341,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="анекдот про бруду"
+                android:text="@string/anekdotbryda"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button12"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -326,18 +359,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="не за что"
+                android:text="@string/nezachto"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button43"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -346,18 +377,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="меня опять убили"
+                android:text="@string/menyaopyatybili"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button45"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -366,18 +395,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="ну как хочешь"
+                android:text="@string/nykakxochesh"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button47"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -386,18 +413,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="ТВОИ РОДИТЕЛИ СЛУЧАЙНО НЕ ХЛЕБ"
+                android:text="@string/troiroditelynexleb"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button49"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -406,18 +431,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="что мне за это будет"
+                android:text="@string/chtomnezaetobudet"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button51"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -426,18 +449,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="ясно понятно"
+                android:text="@string/yasnoponyanto"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button53"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -446,18 +467,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="я читать не умею"
+                android:text="@string/yachitatneumeu"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button55"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -466,18 +485,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Ну пожалуйста"
+                android:text="@string/nyplis"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
             <Button
@@ -486,18 +503,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="в дискорде спою"
+                android:text="@string/discord"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button13"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -506,18 +521,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="когда будем с мамой знакомиться?"
+                android:text="@string/mama"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button44"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -526,18 +539,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="аккаунт"
+                android:text="@string/akkaunt"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button46"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -546,18 +557,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="+роспись"
+                android:text="@string/rospis"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button48"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -566,18 +575,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="откуда такая крошка"
+                android:text="@string/kroshka"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button50"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -586,18 +593,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="что ты сказал"
+                android:text="@string/chtotiskazal"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button52"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -606,18 +611,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="я стесняюсь"
+                android:text="@string/yastesnyays"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button54"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -626,18 +629,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="-шмотки"
+                android:text="@string/shmotki"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:backgroundTint="#2C99CA"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button56"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -646,17 +647,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="анекдот"
+                android:text="@string/anekdot"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button10"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -665,17 +664,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="дырки в сыре"
+                android:text="@string/dirkavsire"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button9"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -684,17 +681,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="байбекайся"
+                android:text="@string/buyback"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button14"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -703,17 +698,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="флай молодец"
+                android:text="@string/flymolodec"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
             <Button
@@ -722,17 +715,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="0 смертей флая"
+                android:text="@string/zerodeathfly"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
             <Button
@@ -741,17 +732,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="флай кушает"
+                android:text="@string/flyfood"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button17"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -760,17 +749,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="трон стоит"
+                android:text="@string/tronstoit"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button18"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -779,17 +766,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Нереальный байбек"
+                android:text="@string/unrealbuyback"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button19"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -798,17 +783,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="байбек флая"
+                android:text="@string/buybackfly"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button20"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -817,17 +800,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="апм флая"
+                android:text="@string/apmfly"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button21"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -836,17 +817,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="ква ква ква"
+                android:text="@string/kvakvakva"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="invisible"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button11"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="visible" />
 
             <Button
@@ -855,17 +834,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="он паузит"
+                android:text="@string/onpausit"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button22"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -874,17 +851,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="макфлури привезли"
+                android:text="@string/makfluri"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button23"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -893,17 +868,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="ставка"
+                android:text="@string/stavka"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button25"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -912,17 +885,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="идеальная игра"
+                android:text="@string/idealnayaigra"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button26"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -931,17 +902,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="без негатива"
+                android:text="@string/beznegativa"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button27"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -950,17 +919,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="самый сильный саппорт"
+                android:text="@string/bestsupport"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button28"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -969,17 +936,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="39/40"
+                android:text="@string/mnogokv"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button29"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -988,17 +953,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="люди кикаются"
+                android:text="@string/ludikikautsa"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button30"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1007,17 +970,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="суперпохуй на игру"
+                android:text="@string/superpoxui"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button31"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1026,17 +987,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="alwayswannaalttab"
+                android:text="@string/alwayswannaalttab"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button32"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1045,17 +1004,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="это ты на сфе 0 - 10?"
+                android:text="@string/_0_10"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button16"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1064,17 +1021,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="А я похож на мамонта?"
+                android:text="@string/mamont"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button24"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1083,17 +1038,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="герыча бы бахнуть"
+                android:text="@string/gerichabi"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button35"
-                app:layout_constraintVertical_bias="0"
                 tools:ignore="TouchTargetSizeCheck"
                 tools:visibility="gone" />
 
@@ -1103,17 +1056,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="жена рожала"
+                android:text="@string/jenarojala"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button36"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1122,17 +1073,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="он рад"
+                android:text="@string/onrad"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button37"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1141,17 +1090,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Ты самый хуевый сф в мире"
+                android:text="@string/worstsf"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button38"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1160,17 +1107,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="5 звезд поставишь"
+                android:text="@string/fivestar"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.928"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button40"
-                app:layout_constraintVertical_bias="0.059"
                 tools:visibility="gone" />
 
             <Button
@@ -1179,17 +1124,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="а я думал денди"
+                android:text="@string/dumaldendi"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.071"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button39"
-                app:layout_constraintVertical_bias="0.044"
                 tools:visibility="gone" />
 
 
@@ -1199,17 +1142,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="песня про кс"
+                android:text="@string/CS"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button59"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1218,17 +1159,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="за тебя калым отдам"
+                android:text="@string/kalim"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button61"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1237,17 +1176,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Улитка в баре"
+                android:text="@string/ulitka"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button63"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1256,17 +1193,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="анекдот про сороконожку"
+                android:text="@string/sorokonojka"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button65"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1275,17 +1210,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Как тебя покорить"
+                android:text="@string/pokorit"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button62"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1294,17 +1227,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="анекдот про сына и школу"
+                android:text="@string/sinandshcool"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button64"
-                app:layout_constraintVertical_bias="0"
                 tools:visibility="gone" />
 
             <Button
@@ -1313,17 +1244,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="анекдот про бабушку"
+                android:text="@string/grandmother"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button66"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
 
@@ -1333,17 +1262,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="Анекдот про онлайн"
+                android:text="@string/online"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button68"
-                app:layout_constraintVertical_bias="0.0"
                 tools:visibility="gone" />
 
             <Button
@@ -1352,17 +1279,16 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="симпл димпл"
+                android:text="@string/simpledimple"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/button60"
-                app:layout_constraintVertical_bias="0.0"
+                tools:ignore="TooManyViews"
                 tools:visibility="gone" />
 
             <Button
@@ -1371,17 +1297,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="фотографирую закат"
+                android:text="@string/femlove"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.93"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
             <Button
@@ -1390,17 +1314,15 @@
                 android:layout_height="80dp"
                 android:backgroundTint="#4799B1"
                 android:fontFamily="@font/ubuntu_light"
-                android:text="in my mind"
+                android:text="@string/in_my_mind"
                 android:textColor="#010101"
-                android:textSize="17dp"
+                android:textSize="17sp"
                 android:visibility="gone"
                 app:cornerRadius="20dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.07"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.158"
                 tools:visibility="gone" />
 
         </LinearLayout>
@@ -1409,107 +1331,100 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/btnNextActivity"
         android:layout_width="0dp"
-        android:layout_height="75dp"
+        android:layout_height="0dp"
         android:background="#2A2D33"
-        android:minHeight="?attr/actionBarSize"
         android:theme="?attr/actionBarTheme"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <ImageView
         android:id="@+id/imageView6"
         android:layout_width="75dp"
         android:layout_height="75dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/btnNextActivity"
-        app:layout_constraintHorizontal_bias="1"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
+        app:layout_constraintStart_toStartOf="@id/guideline4"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0"
+        app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/photo22"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/photo12"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="ContentDescription" />
 
     <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/imageView6"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnNextActivity"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
         app:srcCompat="@drawable/photo8"
-        tools:visibility="visible" />
+        tools:visibility="visible"
+        tools:ignore="ContentDescription" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/zxc2"
+        android:scaleType="centerCrop"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.25"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
         tools:visibility="visible" />
 
     <pl.droidsonroids.gif.GifImageView
         android:id="@+id/imageView5"
-        android:layout_width="75dp"
-        android:layout_height="75dp"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:src="@drawable/zxc"
+        android:scaleType="centerCrop"
         android:visibility="gone"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintBottom_toBottomOf="@id/guideline5"
         tools:visibility="visible" />
 
 
     <VideoView
         android:id="@+id/videoView"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnNextActivity"
+        app:layout_constraintTop_toTopOf="parent"
         tools:visibility="gone" />
 
     <VideoView
         android:id="@+id/videoView2"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="match_parent"
         android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/btnNextActivity"
         tools:visibility="gone" />
 
 
@@ -1522,6 +1437,7 @@
         android:layout_marginBottom="10dp"
         app:cardCornerRadius="25dp"
         app:cardElevation="5dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/card2"
         app:layout_constraintStart_toStartOf="parent"
@@ -1534,7 +1450,7 @@
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-5096572731920152/9959561288"
+            app:adUnitId="ca-app-pub-3940256099942544/6300978111"
             tools:visibility="visible" />
 
     </androidx.cardview.widget.CardView>
@@ -1560,61 +1476,52 @@
             android:background="#8C3754"
             android:visibility="gone"
             app:srcCompat="@android:drawable/ic_lock_power_off"
-            tools:visibility="visible" />
+            tools:visibility="visible"
+            tools:ignore="ContentDescription" />
 
     </androidx.cardview.widget.CardView>
 
     <View
         android:id="@+id/divider"
-        android:layout_width="75dp"
+        android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_marginTop="75dp"
         android:background="@android:color/holo_green_light"
-        android:stateListAnimator="@android:anim/fade_in"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView4"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView4"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/guideline5"
         tools:visibility="visible" />
 
     <View
         android:id="@+id/divider2"
-        android:layout_width="75dp"
+        android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_marginTop="75dp"
         android:background="@android:color/holo_green_light"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline2"
+        app:layout_constraintStart_toStartOf="@id/guideline"
+        app:layout_constraintTop_toTopOf="@id/guideline5"
         tools:visibility="visible" />
 
     <View
         android:id="@+id/divider3"
-        android:layout_width="75dp"
+        android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_marginTop="75dp"
         android:background="@android:color/holo_green_light"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView3"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView3"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline3"
+        app:layout_constraintStart_toStartOf="@id/guideline2"
+        app:layout_constraintTop_toTopOf="@id/guideline5"
         tools:visibility="visible" />
 
     <View
         android:id="@+id/divider4"
-        android:layout_width="75dp"
+        android:layout_width="0dp"
         android:layout_height="3dp"
-        android:layout_marginTop="75dp"
         android:background="@android:color/holo_green_light"
         android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="@+id/imageView5"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/imageView5"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideline4"
+        app:layout_constraintStart_toStartOf="@id/guideline3"
+        app:layout_constraintTop_toTopOf="@id/guideline5"
         tools:visibility="visible" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,8 +19,6 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 
 
-
-
 class MainActivity : AppCompatActivity() {
     lateinit var mAdView: AdView
     private var soundId2 = 1
@@ -99,10 +97,10 @@ class MainActivity : AppCompatActivity() {
     private var counterAd: Int = 0
 
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
 
         val b2 = findViewById<Button>(R.id.button2)  // кнопки
         val b3 = findViewById<Button>(R.id.button3)
@@ -185,6 +183,7 @@ class MainActivity : AppCompatActivity() {
         val Image4 = findViewById<ImageView>(R.id.imageView4) //улиточка
         val Image5 = findViewById<ImageView>(R.id.imageView5) // ангел
         val Image233 = findViewById<ImageView>(R.id.imageView6)   //кнопочка меню
+        val imagecontact = findViewById<ImageView>(R.id.imageViewcontact)
 
         fun clear() {
             b2.visibility = View.GONE
@@ -248,10 +247,10 @@ class MainActivity : AppCompatActivity() {
 
         fun divier ()
         {
-            var div = findViewById<View>(R.id.divider).setVisibility(View.GONE)
-            var div2 = findViewById<View>(R.id.divider2).setVisibility(View.GONE)
-            var div3 = findViewById<View>(R.id.divider3).setVisibility(View.GONE)
-            var div4 = findViewById<View>(R.id.divider4).setVisibility(View.GONE)
+            val div = findViewById<View>(R.id.divider).setVisibility(View.GONE)
+            val div2 = findViewById<View>(R.id.divider2).setVisibility(View.GONE)
+            val div3 = findViewById<View>(R.id.divider3).setVisibility(View.GONE)
+            val div4 = findViewById<View>(R.id.divider4).setVisibility(View.GONE)
         }
 
         val simpleVideoView = findViewById<VideoView>(R.id.videoView)
@@ -289,7 +288,8 @@ class MainActivity : AppCompatActivity() {
             Image233.visibility = View.VISIBLE
             cl.setBackgroundResource(R.drawable.photo11)
 
-
+            val Card = findViewById<CardView>(R.id.card228)
+            Card.visibility = View.VISIBLE
             val Card2 = findViewById<CardView>(R.id.card2)
             Card2.visibility = View.VISIBLE
             val Stop2 = findViewById<ImageView>(R.id.imageView2)
@@ -377,6 +377,7 @@ class MainActivity : AppCompatActivity() {
             tex2.visibility = View.GONE
             tex.visibility = View.GONE
             text.visibility = View.GONE
+            imagecontact.visibility = View.GONE
             text5.visibility = View.GONE
             text6.visibility = View.GONE
         }
@@ -1730,12 +1731,12 @@ class MainActivity : AppCompatActivity() {
 
 
         tex.setOnClickListener {
-            val Uri:Uri = Uri.parse("https://vk.com/vangelnum");
+            val Uri:Uri = Uri.parse("https://vk.com/vangelnum")
             val browser: Intent = Intent(Intent.ACTION_VIEW, Uri);
             startActivity(browser)
         }
         text6.setOnClickListener {
-            val Uri:Uri = Uri.parse("https://www.twitch.tv/zxcursed");
+            val Uri:Uri = Uri.parse("https://www.twitch.tv/zxcursed")
             val browser: Intent = Intent(Intent.ACTION_VIEW, Uri);
             startActivity(browser)
         }
@@ -1784,6 +1785,7 @@ class MainActivity : AppCompatActivity() {
                         tex2.visibility = View.VISIBLE
                         tex.visibility = View.VISIBLE
                         text.visibility = View.VISIBLE
+                        imagecontact.visibility = View.VISIBLE
                         text5.visibility = View.VISIBLE
                         text6.visibility = View.VISIBLE
                     }
@@ -1814,7 +1816,6 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
-
 
     override fun onPause() {
         super.onPause()
@@ -1876,9 +1877,6 @@ class MainActivity : AppCompatActivity() {
         Media69.stop()
         Media69.prepare()
     }
-
-    private fun check()
-    {}
 
     private val mSoundPool = SoundPool.Builder()
         .setMaxStreams(5)
